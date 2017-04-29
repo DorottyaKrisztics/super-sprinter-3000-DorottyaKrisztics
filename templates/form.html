@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+
+    {% if story_id %}
+    <title> Super Sprinter 3000 - Edit Story </title>
+    {% else %}
+    <title> Super Sprinter 3000 - Add new Story </title>
+    {% endif %}
+  </head>
+
+
+  <body>
+    {% if story_id %}
+    <h2> User Story manager - Edit Story </h2>
+    {% else %}
+    <h2> User Story manager - Add new Story  </h2>
+    {% endif %}
+
+
+    <form action="/story/<story_id>" method=>
+
+      <label for="storytitle">Story Title</label>
+      <br>
+      <input type="text" id="storytitle" ><br><br>
+
+      <label for="userstory">User Story</label>
+      <br>
+      <input type="text" id="userstory"><br><br>
+
+      <label for="criteria">Acceptance Criteria</label>
+      <br>
+      <input type="text" id="criteria"><br><br>
+        
+      <label for="businessvalue">Business Value</label>
+      <br>
+      <input type="number" min="100" max="1500" step="100" id="businessvalue"><br><br>
+
+      <label for="estimation">Estimation (h)</label>
+      <br>
+      <input type="number" min="0.5" max="40" step="0.5" id="estimation"><br><br>
+
+
+      <label>Status</label>
+      <br>
+      <select>
+        <option value="planning">Planning</option>
+        <option value="todo">TODO</option>
+        <option value="inprogress">In Progress</option>
+        <option value="review">Review</option>
+        <option value="done">Done</option>
+      </select><br><br>
+
+
+      <input type="submit" value="Create">
+    </form> 
+
+
+
+  </body>
+
+</html> 
