@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
     <head>
         <title> Super Sprinter 3000 </title>
     </head>
@@ -11,7 +10,16 @@
 
         <form action="/list" method=>
             <input type="submit" value="Add a new User Story">
-
+        
+        <ul>
+            {% for item in html_datatable_list %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
 
     </body>
 </html> 
+
+
+        
+ 

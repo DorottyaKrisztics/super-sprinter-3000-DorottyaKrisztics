@@ -18,27 +18,27 @@
     {% endif %}
 
 
-    <form action="/story/<story_id>" method=>
+    <form action="/story/<story_id>" method='POST'>
 
       <label for="storytitle">Story Title</label>
       <br>
-      <input type="text" id="storytitle" ><br><br>
+      <input type="text" name="story_title" id="storytitle" ><br><br>
 
       <label for="userstory">User Story</label>
       <br>
-      <input type="text" id="userstory"><br><br>
+      <input type="text" name="user_story" id="userstory"><br><br>
 
       <label for="criteria">Acceptance Criteria</label>
       <br>
-      <input type="text" id="criteria"><br><br>
+      <input type="text" name="acc_criteria" id="criteria"><br><br>
         
       <label for="businessvalue">Business Value</label>
       <br>
-      <input type="number" min="100" max="1500" step="100" id="businessvalue"><br><br>
+      <input type="number" name="business_value" min="100" max="1500" step="100" id="businessvalue"><br><br>
 
       <label for="estimation">Estimation (h)</label>
       <br>
-      <input type="number" min="0.5" max="40" step="0.5" id="estimation"><br><br>
+      <input type="number" name="estim" min="0.5" max="40" step="0.5" id="estimation"><br><br>
 
 
       <label>Status</label>
