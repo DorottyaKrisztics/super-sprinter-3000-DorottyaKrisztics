@@ -1,3 +1,8 @@
-hello, szia, szevasz, vizilo
-sör, bor, pálinka, csússzon
-le, torkunkba, retekegér, dugo
+id,sa,sa,sa,200,1,inprogress
+id,tr,tr,tr,400,1,review
+id,ew,ew,ew,300,0.5,todo
+id,xy,xy,xy,500,2,todo
+id,zt,zt,zt,200,0.5,todo
+id,ds,ds,ds,300,0.5,review
+id,mn,mn,mn,100,1.5,done
+id,wq,wq,wq,400,0.5,todo

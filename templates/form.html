@@ -18,7 +18,7 @@
     {% endif %}
 
 
-    <form action="/story/<story_id>" method='POST'>
+    <form action="/story" method='POST'>
 
       <label for="storytitle">Story Title</label>
       <br>
@@ -43,7 +43,7 @@
 
       <label>Status</label>
       <br>
-      <select>
+      <select name="status">
         <option value="planning">Planning</option>
         <option value="todo">TODO</option>
         <option value="inprogress">In Progress</option>
@@ -54,9 +54,5 @@
 
       <input type="submit" value="Create">
     </form> 
-
-
-
   </body>
-
 </html> 

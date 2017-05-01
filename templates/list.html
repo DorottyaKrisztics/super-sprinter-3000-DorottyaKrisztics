@@ -4,22 +4,41 @@
         <title> Super Sprinter 3000 </title>
     </head>
 
-
     <body> 
         <h2> User Story manager </h2>
 
-        <form action="/list" method=>
+        <form action="/story" method='GET'>
             <input type="submit" value="Add a new User Story">
-        
-        <ul>
-            {% for item in html_datatable_list %}
-            <li>{{ item }}</li>
-            {% endfor %}
-        </ul>
+        </form>
+        <br><br>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Story Title</th>
+                    <th>User Story</th>
+                    <th>Acceptance Criteria</th>
+                    <th>Business Value</th>
+                    <th>Estimation (h)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                    {% for row in html_datatable_list %}
+                        <tr>
+                        {% for item in row %}
+
+                            <td>{{ item }}</td>
+                        {% endfor %}
+                        </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
     </body>
 </html> 
 
 
-        
- 
+            
+    
