@@ -1,8 +1,6 @@
-id,sa,sa,sa,200,1,inprogress
-id,tr,tr,tr,400,1,review
-id,ew,ew,ew,300,0.5,todo
-id,xy,xy,xy,500,2,todo
-id,zt,zt,zt,200,0.5,todo
-id,ds,ds,ds,300,0.5,review
-id,mn,mn,mn,100,1.5,done
-id,wq,wq,wq,400,0.5,todo
+1,tr,tr,tr,200,0.5,todo
+2,ds,ds,ds,200,1.5,todo
+3,tr,tr,tr,300,0.5,planning
+4,nb,nb,nb,300,1.5,in progress
+5,wq,wq,wq,100,3,in progress
+6,fe,fe,fe,200,2,review

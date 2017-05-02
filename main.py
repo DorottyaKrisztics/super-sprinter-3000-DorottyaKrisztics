@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import csv
+import data_functions
 app = Flask(__name__)
 
 
@@ -7,8 +8,11 @@ app = Flask(__name__)
 def ask_data():
 
     if request.method == 'POST':
+        file_name = "data_table.csv"
+        datatable_list = data_functions.data_read(file_name)
+
         new_line = []
-        new_line.append('id')
+        new_line.append(data_functions.generate_id(datatable_list))
         new_line.append(request.form['story_title'])
         new_line.append(request.form['user_story'])
         new_line.append(request.form['acc_criteria'])
@@ -16,18 +20,9 @@ def ask_data():
         new_line.append(request.form['estim'])
         new_line.append(request.form['status'])
 
-        datatable_list = []
-        with open("data_table.csv", "r") as data_table:
-            for line in data_table:
-                cut_line = line.replace("\n", "")
-                line_list = cut_line.split(',')
-                datatable_list.append(line_list)
         datatable_list.append(new_line)
 
-        with open("data_table.csv", "w") as data_table_add:
-            for item in datatable_list:
-                line_to_csv = ','.join(item)
-                data_table_add.write(line_to_csv + "\n")
+        data_functions.data_write(file_name, datatable_list)
 
         return render_template("list.html", html_datatable_list=datatable_list)
     else:
@@ -42,14 +37,8 @@ def update(story_id):
 @app.route('/', methods=['GET'])
 @app.route('/list', methods=['GET'])
 def data_table():
-    datatable_list = []
-    with open("data_table.csv", "r") as data_table:
-        for line in data_table:
-
-            cut_line = line.replace("\n", "")
-            line_list = cut_line.split(',')
-            datatable_list.append(line_list)
-
+    file_name = "data_table.csv"
+    datatable_list = data_functions.data_read(file_name)
     return render_template("list.html", html_datatable_list=datatable_list)
 
 
